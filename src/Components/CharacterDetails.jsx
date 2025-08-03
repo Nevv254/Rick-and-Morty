@@ -46,7 +46,7 @@ function CharacterDetails() {
         onClick={() => navigate(-1)}
         className="mb-4 bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 rounded"
       >
-        ⬅ Back
+        Back
       </button>
 
       <div className="max-w-md mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
