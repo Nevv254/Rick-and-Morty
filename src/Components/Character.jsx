@@ -49,7 +49,7 @@ function Character() {
     const handleCardClick = (id) => {
         setTimeout(() => {
             navigate(`/character/${id}`);
-        }, 3000);
+        },2000);
     };
 
     // Filter characters based on search input
@@ -61,11 +61,11 @@ function Character() {
 
     return (
         <div
-            className="min-h-screen bg-cover bg-center"
+           
             style={{ backgroundImage: `url(${background})` }}
         >
-            <div className="bg-black bg-opacity-60 min-h-screen px-6 pt-6 pb-10 text-white">
-                <h2 className="font-semibold text-center text-2xl mb-4">
+            <div className="relative z-10 p-6 text-white">
+                <h2 className="font-semibold text-center text-4xl mb-6 italic underline ">
                     Rick and Morty Characters ({filteredCharacters.length})
                 </h2>
 
@@ -81,7 +81,7 @@ function Character() {
                 </div>
 
 
-                {/* Character Grid */}
+                { }
                 <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
                     {filteredCharacters.map((char) => (
                         <div
@@ -98,7 +98,7 @@ function Character() {
                             <button
                                 className="bg-red-600 text-white rounded-lg hover:bg-red-800 p-2 w-full"
                                 onClick={(e) => {
-                                    e.stopPropagation(); // prevent navigation
+                                    e.stopPropagation(); 
                                     handleDelete(char.id);
                                 }}
                             >
